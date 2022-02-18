@@ -18,6 +18,12 @@ workflows:
       - name: Build Android app
         script: 
           ./gradlew bundleRelease  # To generate an .apk use--> ./gradlew assembleRelease
+      - name: SonarQube Analysis with Codemagic
+        script:
+          ./gradlew sonarqube \
+            -Dsonar.projectKey=Android \
+            -Dsonar.host.url=http://localhost:9000 \
+            -Dsonar.login=e672d2622b1dcb98682fc24b2555f5b31a1ca4f7
     artifacts:
       - app/build/outputs/**/**/*.aab
       - app/build/outputs/**/**/*.apk
