@@ -38,6 +38,7 @@ android {
                 storePassword keystoreProperties['storePassword']
         }
     }
+ }
     buildTypes {
         release {
             minifyEnabled false
