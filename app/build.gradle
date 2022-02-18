@@ -11,7 +11,7 @@ def keystorePropertiesFile = rootProject.file("keystore.properties")
 def keystoreProperties = new Properties()
 
 // Load your keystore.properties file into the keystoreProperties object.
-keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+// keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 android {
     compileSdk 32
 
@@ -55,7 +55,6 @@ android {
     buildFeatures {
         viewBinding true
     }
-}
 }
 
 dependencies {
