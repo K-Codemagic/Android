@@ -9,6 +9,7 @@ workflows:
       vars:
         FCI_KEYSTORE_PATH: /tmp/keystore.keystore
       node: latest
+      gradle: 7.3.1
     scripts:
       - name: Set up local properties
         script: echo "sdk.dir=$ANDROID_SDK_ROOT" > "$FCI_BUILD_DIR/local.properties"
