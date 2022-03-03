@@ -22,6 +22,9 @@ workflows:
       - app/build/outputs/**/**/*.aab
       - app/build/outputs/**/**/*.apk
     publishing:
+      email:
+        recipients:
+          - $EMA
       slack:
         channel: '#testing'
         notify_on_build_start: true # To receive a notification when a build starts
