@@ -10,6 +10,17 @@ workflows:
       vars:
         FCI_KEYSTORE_PATH: /tmp/keystore.keystore
       node: latest
+    cache:
+      cache_paths:
+        - ~/.sonar
+    triggering:
+      events:
+        - push
+        - pull_request
+      branch_patterns:
+        - pattern: *
+          include: true
+          source: true
     scripts:
       - name: Set up local properties
         script: echo "sdk.dir=$ANDROID_SDK_ROOT" > "$FCI_BUILD_DIR/local.properties"
