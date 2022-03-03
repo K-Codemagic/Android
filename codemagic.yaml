@@ -25,10 +25,6 @@ workflows:
           # If running in a Linux environment, download https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.4.0.2170-linux.zip 
           unzip $FCI_BUILD_DIR/sonar-scanner.zip
           mv sonar-scanner-* sonar-scanner
-      - |
-        # Generate and upload code analysis report
-        export PATH=$PATH:$FCI_BUILD_DIR/sonar-scanner/bin
-        sonar-scanner \
       - name: Generate and upload code analysis report
         script: 
          # ./gradlew sonarqube \
