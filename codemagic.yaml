@@ -21,7 +21,6 @@ workflows:
       - name: Sonar
         script: 
           ./gradlew sonarqube \
-            -Dsonar.projectKey=sonar \
             -Dsonar.host.url=http://localhost:9000 \
             -Dsonar.login=8b4a0bb4019e20c59940cddf0c9c8181ec059fde
     artifacts:
