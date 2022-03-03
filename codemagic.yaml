@@ -24,7 +24,7 @@ workflows:
     publishing:
       email:
         recipients:
-          - $EMA
+          - kalgi@nevercode.io
       slack:
         channel: '#testing'
         notify_on_build_start: true # To receive a notification when a build starts
