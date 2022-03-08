@@ -30,8 +30,8 @@ workflows:
       - name: Build Android app
         script: |
           ./gradlew bundleRelease  # To generate an .apk use--> ./gradlew assembleRelease
-     - name: Install Sonar
-          script: |
+      - name: Install Sonar
+        script: |
             # download and install the SonarScanner
             wget -O $FCI_BUILD_DIR/sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.4.0.2170-macosx.zip
             # If running in a Linux environment, download https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.4.0.2170-linux.zip 
