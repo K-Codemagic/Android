@@ -39,7 +39,7 @@ workflows:
             mv sonar-scanner-* sonar-scanner
       - name: Generate and upload code analysis report
         script: |
-            export PATH=$PATH:$FCI_BUILD_DIR/sonar-scanner/bin
+            export PATH=$FCI_BUILD_DIR/sonar-scanner/bin
             sonar-scanner -Dsonar.projectKey=sonar -Dsonar.host.url=http://192.168.29.130:9000 -Dsonar.login=8b4a0bb4019e20c59940cddf0c9c8181ec059fde
     artifacts:
       - app/build/outputs/**/**/*.aab
