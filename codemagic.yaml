@@ -10,9 +10,6 @@ workflows:
       vars:
         FCI_KEYSTORE_PATH: /tmp/keystore.keystore
       node: latest
-    cache:
-      cache_paths:
-        - ~/.sonar
     triggering:
       events:
         - push
