@@ -29,7 +29,7 @@ workflows:
           ./gradlew bundleRelease  # To generate an .apk use--> ./gradlew assembleRelease
       - name: Generate and upload code analysis report
         script: |
-            ./gradlew sonarqube -Dsonar.projectKey=sonar -Dsonar.host.url=https://1a51-2405-201-200f-7d67-d0ba-3977-760c-c168.ngrok.io -Dsonar.login=8b4a0bb4019e20c59940cddf0c9c8181ec059fde
+            ./gradlew sonarqube -Dsonar.projectKey=sonar -Dsonar.host.url=http://18.237.244.64:9000 -Dsonar.login=da2dba5eaebd637a977797b6a5bfede5531d7294
     artifacts:
       - app/build/outputs/**/**/*.aab
       - app/build/outputs/**/**/*.apk
