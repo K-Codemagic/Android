@@ -26,7 +26,7 @@ workflows:
           echo $FCI_KEYSTORE | base64 --decode > $FCI_KEYSTORE_PATH         
       - name: Build Android app
         script: |
-          ./gradlew bundleRelease  # To generate an .apk use--> ./gradlew assembleRelease
+          ./gradlew assemblebetaRelease  # To generate an .apk use--> ./gradlew bundleRelease
       - name: Generate and upload code analysis report
         script: |
             ./gradlew sonarqube -Dsonar.projectKey=Android -Dsonar.host.url=http://18.237.244.64:9000 -Dsonar.login=da2dba5eaebd637a977797b6a5bfede5531d7294
