@@ -9,7 +9,7 @@ workflows:
       groups:
         - sonarqube
       vars:
-        FCI_KEYSTORE_PATH: /tmp/keystore.keystore
+        CM_KEYSTORE_PATH: /tmp/keystore.keystore
       node: latest
     triggering:
       events:
