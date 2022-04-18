@@ -25,18 +25,9 @@ workflows:
       - name: Build Android app
         script: |
           ./gradlew assembleRelease
-      - name: Download and install the SonarScanner
-        script: |
-          wget -O $FCI_BUILD_DIR/sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.4.0.2170-macosx.zip
-          unzip $FCI_BUILD_DIR/sonar-scanner.zip
-          mv sonar-scanner-* sonar-scanner
       - name: Generate and upload code analysis report
         script: |
-          export PATH=$PATH:$FCI_BUILD_DIR/sonar-scanner/bin
-          sonar-scanner \
-          -Dsonar.projectKey=$SONAR_PROJECT_KEY \
-          -Dsonar.host.url=$SONARQUBE_URL \
-          # ./gradlew sonarqube -Dsonar.projectKey=$SONAR_PROJECT_KEY -Dsonar.host.url=$SONARQUBE_URL -Dsonar.login=$SONAR_TOKEN
+          ./gradlew sonarqube -Dsonar.projectKey=$SONAR_PROJECT_KEY -Dsonar.host.url=$SONARQUBE_URL -Dsonar.login=$SONAR_TOKEN
     artifacts:
       - app/build/outputs/**/**/*.apk
     publishing:
