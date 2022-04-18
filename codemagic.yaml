@@ -34,8 +34,8 @@ workflows:
         script: |
           export PATH=$PATH:$FCI_BUILD_DIR/sonar-scanner/bin
           sonar-scanner \
-          -Dsonar.projectKey=PROJECT_KEY \
-          -Dsonar.host.url=SONARQUBE_URL \
+          -Dsonar.projectKey=$SONAR_PROJECT_KEY \
+          -Dsonar.host.url=$SONARQUBE_URL \
           # ./gradlew sonarqube -Dsonar.projectKey=$SONAR_PROJECT_KEY -Dsonar.host.url=$SONARQUBE_URL -Dsonar.login=$SONAR_TOKEN
     artifacts:
       - app/build/outputs/**/**/*.apk
