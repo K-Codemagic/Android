@@ -1,4 +1,4 @@
-# Integrating SonarQube with Codemagic using Amazon Linux EC2 Instance
+# Integrating SonarQube with Codemagic
 
 [SonarQube](https://www.sonarqube.org/) is the leading tool for continuously inspecting the **Code Quality** and **Security of your codebase** and guiding development teams during code reviews. It is an **open-source tool** and has support for [29 languages](https://www.sonarqube.org/features/multi-languages/) as of 8th April 2022 and they are growing.
 
