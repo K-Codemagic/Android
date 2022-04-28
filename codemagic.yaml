@@ -22,9 +22,9 @@ workflows:
     scripts:
       - name: Set up local properties
         script: |
-        echo $CM_KEYSTORE_PATH
-        echo $CM_KEY_ALIAS
-        echo "sdk.dir=$ANDROID_SDK_ROOT" > "$FCI_BUILD_DIR/local.properties"  
+          echo $CM_KEYSTORE_PATH
+          echo $CM_KEY_ALIAS
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > "$FCI_BUILD_DIR/local.properties"  
       - name: Build Android app
         script: |
           ./gradlew assembleRelease
